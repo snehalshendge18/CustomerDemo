@@ -31,6 +31,10 @@ namespace CustomerDemo.Controllers
         {
             return View();
         }
+        public IActionResult PrivacyDelete()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
