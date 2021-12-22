@@ -31,6 +31,10 @@ namespace CustomerDemo.Controllers
         {
             return View();
         }
+        public IActionResult PrivacySub()
+        {
+            return View();
+        }
 
         public IActionResult Privacyfill()
         {
