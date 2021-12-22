@@ -1,0 +1,66 @@
+﻿@using CustomerDemo
+@model IEnumerable<CustomerFirstClass>
+
+<partial name="_Notification"/>
+<div class="container p-3">
+    <div class="row pt-4">
+
+        <div class=" col-6">
+        
+        </div>
+        <div class=" col-6 text-end">
+            <a asp-controller="Customer" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp;  Add Item
+            </a>
+        </div>
+    </div> <br><br>
+
+    <h1 style="text-align:center;"> Customers Sheet</h1>
+    <div>
+
+
+        <table class=" table table-bordered table-striped" style=width:100%>
+            <thead>
+                <tr>
+                    <th>CustmomerID</th>
+                    <Th> Product </Th>
+                    <th> Amount </th>
+
+                    <th> Address </th>
+                    <th> Contact </th>
+                    <th>  </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+
+                {
+                    <tr>
+                        <td width="25%">
+                            @obj.CustmomerID
+                        </td>
+                        <td width="25%">
+                            @obj.Product
+                        </td>
+                        <td width="25%">
+                            @obj.Amount
+                        </td>
+                        <td width="25%">
+                            @obj.Address
+                        </td>
+                        <td width="25%">
+                            @obj.Contact
+                        </td>
+                        <td>
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Customer" asp-action="Edit" asp-route-id="@obj.CustmomerID" class="btn btn-primary mx-2">  <i class="bi bi-pencil-square"></i> Edit</a>
+                                <a asp-controller="Customer" asp-action="Delete" asp-route-id="@obj.CustmomerID" class="btn btn-primary mx-2">  <i class="bi bi-trash"></i> Delete</a>
+                            </div>
+                                </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
