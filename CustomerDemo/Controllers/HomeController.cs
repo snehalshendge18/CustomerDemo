@@ -27,6 +27,10 @@ namespace CustomerDemo.Controllers
         {
             return View();
         }
+        public IActionResult PrivacyWelcome()
+        {
+            return View();
+        }
 
         public IActionResult Privacyfill()
         {
