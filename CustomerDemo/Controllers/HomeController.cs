@@ -28,6 +28,11 @@ namespace CustomerDemo.Controllers
             return View();
         }
 
+        public IActionResult Privacyfill()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
